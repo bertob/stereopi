@@ -1,7 +1,6 @@
 var http = require('http');
 var url = require('url') ;
 var sys = require('util');
-var process = require('process');
 var exec = require('child_process').exec;
 
 var MUSIC_PATH = "~/Muziko/*/*/*.mp3";
