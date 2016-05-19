@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>StereoPi</title>
+    <link rel="stylesheet" href="lib/flickity.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <section class="container" id="container">
+      <div class="carousel">
+				<div class="gallery-cell paused">
+          <img class="dudes" src="img/stop.svg">
+          <h2>La musica è ferma...</h2>
+          <p>Swipa per farla partire
+            <svg style="width: 12px; transform: rotate(180deg)"viewbox="0 0 100 100">
+              <path class="arrow" d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z" />
+            </svg>
+          </p>
+        </div>
+        <div class="gallery-cell playing">
+          <img class="dudes" src="img/play.svg">
+          <h2>La musica sta playando!</h2>
+          <p>
+            <svg style="width: 12px"viewbox="0 0 100 100">
+              <path class="arrow" d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z" />
+            </svg>
+            Swipa per fermarla</p>
+        </div>
+      </div>
+    </section>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/flickity.pkgd.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
