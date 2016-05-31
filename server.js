@@ -3,8 +3,8 @@ var url = require('url') ;
 var sys = require('util');
 var exec = require('child_process').exec;
 
-var MUSIC_PATH = "~/Muziko/*/*/*.mp3";
-var SERVER_IP = "192.168.12.16";
+var MUSIC_PATH = "/media/pi/A/music/*/*.mp3";
+var SERVER_IP = "172.24.1.1";
 var SERVER_PORT = "1337";
 
 function puts(error, stdout, stderr) {
@@ -28,9 +28,11 @@ http.createServer(function(request, response) {
 
 function startMusic() {
   console.log("starting!");
+  exec('echo "start ' +  Date.now() + '" >> /home/pi/music.log', puts);
   exec("mplayer " + MUSIC_PATH + " -shuffle", puts);
 }
 function stopMusic() {
   console.log("stopping!");
+  exec('echo "stop ' +  Date.now() + '" >> /home/pi/music.log', puts);
   exec("killall mplayer", puts);
 }

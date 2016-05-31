@@ -1,5 +1,5 @@
 var flkty;
-var SERVER_IP = "172.24.1.121";
+var SERVER_IP = "172.24.1.1";
 var PORT = 1337;
 
 window.onload = function() {
