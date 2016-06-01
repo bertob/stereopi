@@ -3,7 +3,7 @@ var SERVER_IP = "172.24.1.1";
 var PORT = 1337;
 
 window.onload = function() {
-  callServer("stop"); // stop music when the application is opened
+  // callServer("stop"); // stop music when the application is opened
 	flkty = new Flickity(".carousel", {
 		initialIndex: 0
 	});

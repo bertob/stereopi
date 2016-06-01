@@ -28,11 +28,12 @@ http.createServer(function(request, response) {
 
 function startMusic() {
   console.log("starting!");
-  exec('echo "start ' +  Date.now() + '" >> /home/pi/music.log', puts);
+  exec('echo start >> /home/pi/music.log', puts);
+  exec("killall mplayer", puts);
   exec("mplayer " + MUSIC_PATH + " -shuffle", puts);
 }
 function stopMusic() {
   console.log("stopping!");
-  exec('echo "stop ' +  Date.now() + '" >> /home/pi/music.log', puts);
+  exec('echo stop >> /home/pi/music.log', puts);
   exec("killall mplayer", puts);
 }
