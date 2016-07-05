@@ -15,7 +15,7 @@
    id="svg5234"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="play.svg">
+   sodipodi:docname="back.svg">
   <defs
      id="defs5236" />
   <sodipodi:namedview
@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8"
-     inkscape:cx="52.234354"
-     inkscape:cy="36.846654"
+     inkscape:zoom="1.4"
+     inkscape:cx="-129.70827"
+     inkscape:cy="52.390897"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -39,16 +39,7 @@
      inkscape:window-height="741"
      inkscape:window-x="0"
      inkscape:window-y="27"
-     inkscape:window-maximized="1"
-     inkscape:snap-text-baseline="true"
-     inkscape:snap-page="true"
-     inkscape:snap-center="true"
-     inkscape:snap-object-midpoints="true"
-     inkscape:snap-bbox="true"
-     inkscape:bbox-paths="true"
-     inkscape:bbox-nodes="true"
-     inkscape:snap-bbox-edge-midpoints="true"
-     inkscape:snap-bbox-midpoints="true" />
+     inkscape:window-maximized="1" />
   <metadata
      id="metadata5239">
     <rdf:RDF>
@@ -66,10 +57,25 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-548.21429,-489.14792)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path5146"
-       d="m 560.21422,497.51744 0,18.26097 15.00009,-9.13049 z"
-       style="fill:#fd0c5c;fill-opacity:1;fill-rule:evenodd;stroke:#fd0c5c;stroke-width:3.46409106px;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1" />
+    <g
+       style="fill:#f4f22a;fill-opacity:1;stroke:#f4f22a;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1"
+       transform="matrix(0.60629614,0,0,0.82143178,-1126.9909,-423.51037)"
+       id="g5150">
+      <g
+         style="fill:#f4f22a;fill-opacity:1;stroke:#f4f22a;stroke-opacity:1"
+         transform="translate(-2.3710702,-1.7382813e-5)"
+         id="g5152">
+        <path
+           style="fill:#f4f22a;fill-opacity:1;fill-rule:evenodd;stroke:#f4f22a;stroke-width:3.46409082px;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1"
+           d="m 2805,1125.0579 0,14.6086 -12,-7.3043 z"
+           id="path5154"
+           inkscape:connector-curvature="0" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path5156"
+           d="m 2790.5808,1125.0579 0,14.6086 -12,-7.3043 z"
+           style="fill:#f4f22a;fill-opacity:1;fill-rule:evenodd;stroke:#f4f22a;stroke-width:3.46409082px;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1" />
+      </g>
+    </g>
   </g>
 </svg>
