@@ -4,7 +4,7 @@ var sys = require('util');
 var exec = require('child_process').exec;
 
 var CONTROL_PATH = "/tmp/mplayer-control";
-var MUSIC_PATH = "media/pi/*/*.mp3 media/pi/*/*/*.mp3 media/pi/*/*/*/*.mp3";
+var MUSIC_PATH = "/media/pi/*/*.mp3 /media/pi/*/*/*.mp3 /media/pi/*/*/*/*.mp3";
 // var MUSIC_PATH = "/home/tobi/Muziko/*/*/*.mp3";
 var SERVER_IP = "172.24.1.1";
 // var SERVER_IP = "172.24.1.121";
