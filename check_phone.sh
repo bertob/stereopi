@@ -3,7 +3,7 @@
 status=$2
 echo "$2 $1" >> /home/pi/wifi-controls.log
 
-if sudo nmap -sP -sn 172.24.1.0/24 | grep -q --line-buffered $1
+if nmap -sP -sn 172.24.1.0/24 | grep -q --line-buffered $1
 then
   echo "Phone present :D"
   if [ "$status" = "OFF" ]
