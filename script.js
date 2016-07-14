@@ -1,7 +1,7 @@
 var SERVER_IP = "172.24.1.1";
 var PORT = 1337;
 
-$("#play").on("touchend", function() {
+$("#reset").on("touchend", function() {
 	callServer("reset");
 });
 $("#pause").on("touchend", function() {
@@ -13,7 +13,7 @@ $("#next").on("touchend", function() {
 var sendVolume = true;
 $("#volume").on("touchmove", function() {
 	if (sendVolume) {
-		var vol = parseInt(document.getElementById("volume").value) + 20;
+		var vol = parseInt(document.getElementById("volume").value);
 		callServer("volume/" + vol);
 		sendVolume = false;
 		setTimeout(function() {

@@ -1,11 +1,10 @@
 #!/bin/bash
 
 export NMAP_PRIVILEGED=""
-PHONE_ID=$(<phone.conf)
-
-nohup amixer set PCM 100% > /dev/null 2>&1 &
+nohup amixer set PCM 50% > /dev/null 2>&1 &
 
 cd ~/stereopi
+PHONE_ID=$(<phone.conf)
 
 # API server for music controls
 nohup node server.js > /dev/null 2>&1 &
