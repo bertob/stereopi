@@ -6,16 +6,16 @@ window.onload = function() {
   // callServer("pause"); // stop music when the application is opened
 };
 
-$("#play").on("click touchstart", function() {
+$("#play").on("click touchend", function() {
 	callServer("pause");
 });
-$("#prev").on("click touchstart", function() {
+$("#prev").on("click touchend", function() {
 	callServer("prev");
 });
-$("#next").on("click touchstart", function() {
+$("#next").on("click touchend", function() {
 	callServer("next");
 });
-$("#volume").on("click touchstart", function() {
+$("#volume").on("click touchend", function() {
 	var vol = document.getElementById("volume").value;
 	callServer("volume/" + vol);
 	console.log("volume/" + vol);
