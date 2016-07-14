@@ -18,16 +18,16 @@ http.createServer(function(request, response) {
   var cmd = request.url.split("/")[1];
   var param = request.url.split("/")[2];
   console.log(cmd);
+  if (cmd === "play") {
+    exec('echo "set_property paused 0" > ' + CONTROL_PATH, puts);
+  }
   if (cmd === "pause") {
-    exec('echo "pause" > ' + CONTROL_PATH, puts);
+    exec('echo "pausing_keep_force pause" > ' + CONTROL_PATH, puts);
   }
   else if (cmd === "next") {
     exec('echo "pt_step 1" > ' + CONTROL_PATH, puts);
   }
-  else if (cmd === "prev") {
-    exec('echo "pt_step -1" > ' + CONTROL_PATH, puts);
-  }
-  else if (cmd === "audio") {
+  else if (cmd === "volume") {
     var vol = parseFloat(param);
     exec("amixer set PCM " + vol + "%", puts);
   }
@@ -40,23 +40,3 @@ http.createServer(function(request, response) {
 function puts(error, stdout, stderr) {
   sys.puts(stdout);
 }
-
-// function pauseMusic() {
-//   console.log("starting!");
-//   // exec('echo start >> /home/pi/music.log', puts);
-// }
-// function nextMusic() {
-//   console.log("stopping!");
-//   // exec('echo stop >> /home/pi/music.log', puts);
-// }
-// function prevMusic() {
-//   console.log("stopping!");
-//   // exec('echo stop >> /home/pi/music.log', puts);
-// }
-
-
-// function stopMusic() {
-//   console.log("stopping!");
-//   exec('echo stop >> /home/pi/music.log', puts);
-//   exec("killall mplayer", puts);
-// }
