@@ -1,11 +1,22 @@
 var SERVER_IP = "172.24.1.1";
 var PORT = 1337;
 
+var playing = true;
+
 $("#reset").on("touchend", function() {
 	callServer("reset");
 });
 $("#pause").on("touchend", function() {
-	callServer("pause");
+	if (playing) {
+		callServer("pause");
+		$(this).removeClass("play");
+		playing = false;
+	}
+	else {
+		callServer("play");
+		$(this).addClass("play");
+		playing = true;
+	}
 });
 $("#next").on("touchend", function() {
 	callServer("next");
@@ -13,7 +24,7 @@ $("#next").on("touchend", function() {
 var sendVolume = true;
 $("#volume").on("touchmove", function() {
 	if (sendVolume) {
-		var vol = parseInt(document.getElementById("volume").value);
+		var vol = (parseInt(document.getElementById("volume").value) / 2) + 50;
 		callServer("volume/" + vol);
 		sendVolume = false;
 		setTimeout(function() {
