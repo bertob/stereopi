@@ -3,7 +3,7 @@
 export NMAP_PRIVILEGED=""
 PHONE_MAC=""
 
-amixer set PCM 100%
+nohup amixer set PCM 100% > /dev/null 2>&1 &
 
 cd ~/stereopi
 

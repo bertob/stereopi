@@ -13,7 +13,7 @@ $("#next").on("touchend", function() {
 var sendVolume = true;
 $("#volume").on("touchmove", function() {
 	if (sendVolume) {
-		var vol = document.getElementById("volume").value;
+		var vol = parseInt(document.getElementById("volume").value) + 20;
 		callServer("volume/" + vol);
 		sendVolume = false;
 		setTimeout(function() {

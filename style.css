@@ -21,6 +21,7 @@ body {
   background-color: #fd0c5c;
   color: #fff;
   overflow: hidden;
+  transition: background-color 0.8s ease-out; 
 }
 h2 {
   font-weight: 300;
@@ -166,7 +167,7 @@ input[type=range] {
   margin-left: -5em;
   font-size: 27px;
   transform: rotate(-5deg);
-  background-image: url(img/play.svg);
+  background-image: url(img/reset.svg);
 }
 .play:active {
   transform: rotate(-5deg) scale(0.9);
@@ -201,7 +202,7 @@ input[type=range] {
   display: block;
   margin: 0 auto;
   transform: translate(0.2em) rotate(-3deg);
-  max-width: 300px;
+  max-width: 230px;
 }
 
 @media screen and (max-height: 450px) {
