@@ -21,7 +21,6 @@ http.createServer(function(request, response) {
   if (cmd === "reset") {
     exec('killall mplayer', puts);
     exec("mplayer -slave -input file=" + CONTROL_PATH + " " + MUSIC_PATH + " -shuffle", puts);
-    exec("mplayer -slave -input file=/tmp/mplayer-control /media/pi/*/*.mp3 /media/pi/*/*/*.mp3 /media/pi/*/*/*/*.mp3 -shuffle", puts);
   }
   if (cmd === "play") {
     exec('echo "set_property pause 0" > ' + CONTROL_PATH, puts);

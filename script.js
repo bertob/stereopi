@@ -23,7 +23,7 @@ $("#volume").on("touchmove", function() {
 });
 
 function callServer(cmd) {
-	$("body").css("background-color", "#" + parseInt(Math.random()*899999 + 100000));
+	// $("body").css("background-color", "#" + parseInt(Math.random()*899999 + 100000));
 	console.log(SERVER_IP + ":" + PORT + "/" + cmd);
 	$.post(
 		"http://" + SERVER_IP + ":" + PORT + "/" + cmd
