@@ -18,6 +18,10 @@ http.createServer(function(request, response) {
   var cmd = request.url.split("/")[1];
   var param = request.url.split("/")[2];
   console.log(cmd);
+  if (cmd === "reset") {
+    exec('killall mplayer', puts);
+    exec("mplayer -slave -input file=" + CONTROL_PATH + " " + MUSIC_PATH + " -shuffle", puts);
+  }
   if (cmd === "play") {
     exec('echo "set_property paused 0" > ' + CONTROL_PATH, puts);
   }

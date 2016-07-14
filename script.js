@@ -2,7 +2,7 @@ var SERVER_IP = "172.24.1.1";
 var PORT = 1337;
 
 $("#play").on("touchend", function() {
-	callServer("play");
+	callServer("reset");
 });
 $("#pause").on("touchend", function() {
 	callServer("pause");
