@@ -1,23 +1,31 @@
 var SERVER_IP = "172.24.1.1";
 var PORT = 1337;
 
-$("#play").on("click touchend", function() {
+$("#play").on("touchend", function() {
 	callServer("play");
 });
-$("#pause").on("click touchend", function() {
+$("#pause").on("touchend", function() {
 	callServer("pause");
 });
-$("#next").on("click touchend", function() {
+$("#next").on("touchend", function() {
 	callServer("next");
 });
-$("#volume").on("click touchend", function() {
-	var vol = document.getElementById("volume").value;
-	callServer("volume/" + vol);
+var sendVolume = true;
+$("#volume").on("touchmove", function() {
+	if (sendVolume) {
+		var vol = document.getElementById("volume").value;
+		callServer("volume/" + vol);
+		sendVolume = false;
+		setTimeout(function() {
+			sendVolume = true;
+		}, 300);
+	}
 });
 
 function callServer(cmd) {
-  console.log(SERVER_IP + ":" + PORT + "/" + cmd);
-  $.post(
-    "http://" + SERVER_IP + ":" + PORT + "/" + cmd
-  );
+	$("body").css("background-color", "#" + parseInt(Math.random()*899999 + 100000));
+	console.log(SERVER_IP + ":" + PORT + "/" + cmd);
+	$.post(
+		"http://" + SERVER_IP + ":" + PORT + "/" + cmd
+	);
 }
