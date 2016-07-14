@@ -144,12 +144,14 @@ input[type=range] {
   justify-content: space-around;
 }
 .button {
+  position: absolute;
+  left: 50%;
+  height: 5em;
+  width: 5em;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 3em;
   background-color: white;
-  height: 5em;
-  width: 5em;
   border-radius: 30em;
   border: none;
   cursor: pointer;
@@ -160,25 +162,30 @@ input[type=range] {
 }
 
 .play {
-  position: absolute;
   bottom: 230px;
-  left: 50%;
-  margin-left: -4.5em;
-  transform: rotate(-5deg);
+  margin-left: -5em;
   font-size: 27px;
+  transform: rotate(-5deg);
   background-image: url(img/play.svg);
 }
 .play:active {
   transform: rotate(-5deg) scale(0.9);
 }
+.pause {
+  bottom: 300px;
+  margin-left: 0.3em;
+  font-size: 24px;
+  transform: rotate(-9deg);
+  background-image: url(img/pause.svg);
+}
+.pause:active {
+  transform: rotate(-9deg) scale(0.9);
+}
 .next {
-  position: absolute;
-  margin-left: 1.3em;
   bottom: 180px;
-  left: 50%;
-  margin-top: 0.3em;
-  transform: rotate(12deg);
+  margin-left: 0.3em;
   font-size: 20px;
+  transform: rotate(12deg);
   background-image: url(img/next.svg);
 }
 .next:active {

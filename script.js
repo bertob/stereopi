@@ -1,16 +1,11 @@
-var flkty;
 var SERVER_IP = "172.24.1.1";
 var PORT = 1337;
 
-window.onload = function() {
-  // callServer("pause"); // stop music when the application is opened
-};
-
 $("#play").on("click touchend", function() {
-	callServer("pause");
+	callServer("play");
 });
-$("#prev").on("click touchend", function() {
-	callServer("prev");
+$("#pause").on("click touchend", function() {
+	callServer("pause");
 });
 $("#next").on("click touchend", function() {
 	callServer("next");
@@ -18,7 +13,6 @@ $("#next").on("click touchend", function() {
 $("#volume").on("click touchend", function() {
 	var vol = document.getElementById("volume").value;
 	callServer("volume/" + vol);
-	console.log("volume/" + vol);
 });
 
 function callServer(cmd) {
