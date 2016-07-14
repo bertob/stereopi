@@ -11,7 +11,7 @@ var SERVER_IP = "172.24.1.1";
 var SERVER_PORT = "1337";
 
 // Start music on boot
-exec("mkfifo /tmp/mplayer-control", puts);
+// exec("mkfifo /tmp/mplayer-control", puts);
 exec("mplayer -slave -input file=" + CONTROL_PATH + " " + MUSIC_PATH + " -shuffle", puts);
 
 http.createServer(function(request, response) {
