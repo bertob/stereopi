@@ -201,5 +201,5 @@ input[type=range] {
   display: block;
   margin: 0 auto;
   transform: translate(0.2em) rotate(-3deg);
-  max-width: 350px;
+  max-width: 300px;
 }
