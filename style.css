@@ -160,7 +160,7 @@ input[type=range] {
 }
 
 .pause {
-  bottom: 230px;
+  bottom: 210px;
   margin-left: -5em;
   font-size: 27px;
   transform: rotate(-5deg);
@@ -170,7 +170,7 @@ input[type=range] {
   transform: rotate(-5deg) scale(0.9);
 }
 .reset {
-  bottom: 300px;
+  bottom: 280px;
   margin-left: 0.3em;
   font-size: 24px;
   transform: rotate(-30deg);
@@ -180,7 +180,7 @@ input[type=range] {
   transform: rotate(-30deg) scale(0.9);
 }
 .next {
-  bottom: 180px;
+  bottom: 160px;
   margin-left: 0.3em;
   font-size: 20px;
   transform: rotate(12deg);
@@ -198,11 +198,30 @@ input[type=range] {
 .volume {
   display: block;
   margin: 0 auto;
-  transform: translate(0.2em) rotate(-3deg);
   max-width: 230px;
 }
 
 @media screen and (max-height: 450px) {
+  .pause {
+    font-size: 26px;
+    margin-left: -4.5em;
+    bottom: 160px;
+  }
+  .next {
+    font-size: 20px;
+    margin-left: 1.5em;
+    bottom: 130px;
+  }
+  .reset {
+    font-size: 18px;
+    margin-left: 0.7em;
+    bottom: 250px;
+  }
+  .volume-container {
+    bottom: 60px;
+  }
+}
+@media screen and (max-height: 350px) {
   .pause {
     font-size: 18px;
     margin-left: -7.6em;
