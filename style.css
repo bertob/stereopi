@@ -21,7 +21,7 @@ body {
   background-color: #fd0c5c;
   color: #fff;
   overflow: hidden;
-  transition: background-color 0.8s ease-out; 
+  transition: background-color 0.8s ease-out;
 }
 h2 {
   font-weight: 300;
@@ -83,9 +83,6 @@ input[type=range]::-webkit-slider-thumb {
   cursor: pointer;
   margin-top: -29px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
   transition: all 0.09s ease-out;
-}
-input[type=range]::-webkit-slider-thumb:active {
-  transform: scale(0.9);
 }
 
 /* All the same stuff for Firefox */
@@ -162,25 +159,25 @@ input[type=range] {
   transform: scale(0.9);
 }
 
-.play {
+.pause {
   bottom: 230px;
   margin-left: -5em;
   font-size: 27px;
   transform: rotate(-5deg);
-  background-image: url(img/reset.svg);
-}
-.play:active {
-  transform: rotate(-5deg) scale(0.9);
-}
-.pause {
-  bottom: 300px;
-  margin-left: 0.3em;
-  font-size: 24px;
-  transform: rotate(-9deg);
   background-image: url(img/pause.svg);
 }
 .pause:active {
-  transform: rotate(-9deg) scale(0.9);
+  transform: rotate(-5deg) scale(0.9);
+}
+.reset {
+  bottom: 300px;
+  margin-left: 0.3em;
+  font-size: 24px;
+  transform: rotate(-30deg);
+  background-image: url(img/reset.svg);
+}
+.reset:active {
+  transform: rotate(-30deg) scale(0.9);
 }
 .next {
   bottom: 180px;
@@ -206,18 +203,18 @@ input[type=range] {
 }
 
 @media screen and (max-height: 450px) {
-  .play {
+  .pause {
     font-size: 18px;
     margin-left: -7.6em;
     bottom: 130px;
   }
-  .pause {
+  .next {
     font-size: 17px;
     margin-left: -1.7em;
     bottom: 153px;
   }
-  .next {
-    font-size: 14px;
+  .reset {
+    font-size: 16px;
     margin-left: 4.5em;
     bottom: 120px;
   }
