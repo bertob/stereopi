@@ -203,3 +203,25 @@ input[type=range] {
   transform: translate(0.2em) rotate(-3deg);
   max-width: 300px;
 }
+
+@media screen and (max-height: 450px) {
+  .play {
+    font-size: 18px;
+    margin-left: -7.6em;
+    bottom: 130px;
+  }
+  .pause {
+    font-size: 17px;
+    margin-left: -1.7em;
+    bottom: 153px;
+  }
+  .next {
+    font-size: 14px;
+    margin-left: 4.5em;
+    bottom: 120px;
+  }
+  .volume-container {
+    font-size: 16px;
+    bottom: 55px;
+  }
+}
