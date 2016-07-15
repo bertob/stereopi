@@ -12,15 +12,23 @@ var SERVER_PORT = "1337";
 
 // Start music on boot
 // exec("mkfifo /tmp/mplayer-control", puts);
-exec("mplayer -slave -input file=" + CONTROL_PATH + " " + MUSIC_PATH + " -shuffle", puts);
+resetPlayer();
+
+function resetPlayer() {
+  console.log("reset");
+  exec('killall mplayer', puts);
+  exec("mplayer -slave -input file=" + CONTROL_PATH + " " + MUSIC_PATH + " -shuffle", puts);
+  setTimeout(function() {
+    resetPlayer();
+  }, 8 * 60 * 1000);
+}
 
 http.createServer(function(request, response) {
   var cmd = request.url.split("/")[1];
   var param = request.url.split("/")[2];
   console.log(cmd);
   if (cmd === "reset") {
-    exec('killall mplayer', puts);
-    exec("mplayer -slave -input file=" + CONTROL_PATH + " " + MUSIC_PATH + " -shuffle", puts);
+    resetPlayer();
   }
   if (cmd === "play") {
     exec('echo "set_property pause 0" > ' + CONTROL_PATH, puts);
