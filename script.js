@@ -4,6 +4,7 @@ var PORT = 1337;
 var playing = true;
 
 $("#reset").on("touchend", function() {
+	$(this).removeClass("play");
 	callServer("reset");
 });
 $("#pause").on("touchend", function() {
