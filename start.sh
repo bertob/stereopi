@@ -9,10 +9,11 @@ PHONE_ID=$(<phone.conf)
 # static server for client web UI
 nohup python3 -m http.server > /dev/null 2>&1 &
 
-# API server for music controls
-// Start music on boot
+# Start music on boot
 mkfifo /tmp/mplayer-control
 sleep 3
+
+# API server for music controls
 nohup node server.js > /dev/null 2>&1 &
 
 # script periodically checking for phone

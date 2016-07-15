@@ -22,9 +22,9 @@ $("#next").on("touchend", function() {
 	callServer("next");
 });
 var sendVolume = true;
-$("#volume").on("touchmove", function() {
+$("#volume").on("oninput", function() {
 	if (sendVolume) {
-		var vol = (parseInt(document.getElementById("volume").value) / 2) + 50;
+		var vol = Math.round((parseInt(document.getElementById("volume").value) * 0.6) + 40);
 		callServer("volume/" + vol);
 		sendVolume = false;
 		setTimeout(function() {
