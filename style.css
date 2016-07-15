@@ -164,10 +164,10 @@ input[type=range] {
   margin-left: -5em;
   font-size: 27px;
   transform: rotate(-5deg);
-  background-image: url(img/pause.svg);
+  background-image: url(img/playpause.svg);
 }
 .play {
-  background-image: url(img/play.svg);
+  /*background-image: url(img/play.svg);*/
   background-size: 3em;
 }
 .pause:active {
