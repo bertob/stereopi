@@ -22,7 +22,7 @@ $("#next").on("touchend", function() {
 	callServer("next");
 });
 var sendVolume = true;
-$("#volume").on("oninput", function() {
+$("#volume").on("input change", function() {
 	if (sendVolume) {
 		var vol = Math.round((parseInt(document.getElementById("volume").value) * 0.6) + 40);
 		callServer("volume/" + vol);
